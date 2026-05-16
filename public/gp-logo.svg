@@ -1,0 +1,54 @@
+<svg width="760" height="260" viewBox="0 0 760 260" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="steel" x1="0" y1="0" x2="760" y2="260" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#DDECF1"/>
+      <stop offset="0.5" stop-color="#F7FBFC"/>
+      <stop offset="1" stop-color="#BFD4DA"/>
+    </linearGradient>
+    <linearGradient id="navy" x1="180" y1="45" x2="180" y2="205" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#6D8EAC"/>
+      <stop offset="0.45" stop-color="#16395E"/>
+      <stop offset="1" stop-color="#091D35"/>
+    </linearGradient>
+    <linearGradient id="green" x1="455" y1="44" x2="455" y2="183" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#24D99D"/>
+      <stop offset="1" stop-color="#05945F"/>
+    </linearGradient>
+    <linearGradient id="red" x1="390" y1="40" x2="390" y2="102" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#FF8D8A"/>
+      <stop offset="1" stop-color="#B91F2A"/>
+    </linearGradient>
+    <filter id="shadow" x="-20%" y="-20%" width="140%" height="150%">
+      <feDropShadow dx="0" dy="10" stdDeviation="7" flood-color="#061A2D" flood-opacity="0.34"/>
+    </filter>
+    <filter id="greenGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feDropShadow dx="0" dy="0" stdDeviation="8" flood-color="#25E59F" flood-opacity="0.65"/>
+    </filter>
+  </defs>
+
+  <rect width="760" height="260" rx="20" fill="url(#steel)"/>
+  <path d="M0 28h760M0 50h760M0 72h760M0 94h760M0 116h760M0 138h760M0 160h760M0 182h760M0 204h760M0 226h760" stroke="#AFC4CC" stroke-opacity="0.22"/>
+
+  <g filter="url(#shadow)">
+    <circle cx="198" cy="86" r="55" fill="none" stroke="url(#navy)" stroke-width="15"/>
+    <path d="M159 47c0-18 12-30 28-30h21c16 0 28 12 28 30v54c0 31-23 57-52 57s-52-26-52-57V69" stroke="url(#navy)" stroke-width="13" stroke-linecap="round"/>
+    <path d="M132 69c-17 4-30 19-30 38 0 44 37 77 83 77 42 0 76-24 91-60" stroke="url(#navy)" stroke-width="13" stroke-linecap="round"/>
+    <path d="M276 124c16-39 67-27 66 10-1 27-34 41-55 22" stroke="url(#navy)" stroke-width="13" stroke-linecap="round"/>
+    <circle cx="343" cy="134" r="19" fill="#DCECF4" stroke="url(#navy)" stroke-width="11"/>
+  </g>
+
+  <g filter="url(#shadow)">
+    <path d="M366 44h36V10h35v34h36v34h-36v34h-35V78h-36V44Z" fill="url(#red)"/>
+  </g>
+
+  <g filter="url(#greenGlow)">
+    <path d="M492 40h91c51 0 86 30 86 74s-35 74-86 74h-38v36h-53V40Zm86 103c22 0 36-11 36-29s-14-29-36-29h-33v58h33Z" fill="url(#green)"/>
+    <path d="M494 184h41v40h-41v-40Zm13-58h18v18h19v20h-19v19h-18v-19h-19v-20h19v-18Z" fill="#1FD394"/>
+  </g>
+
+  <text x="617" y="123" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="900" fill="#058D61" filter="url(#shadow)">Primary</text>
+  <text x="617" y="158" font-family="Arial, Helvetica, sans-serif" font-size="31" font-weight="900" fill="#058D61" filter="url(#shadow)">Care</text>
+
+  <text x="87" y="226" font-family="Arial, Helvetica, sans-serif" font-size="38" font-weight="900" letter-spacing="2.5" fill="#142C49" filter="url(#shadow)">GP CONSULTING SOLUTIONS</text>
+  <text x="178" y="252" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700" letter-spacing="1.2" fill="#183350" opacity="0.92">Empowering Primary Care Excellence</text>
+</svg>
