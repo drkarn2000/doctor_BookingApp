@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import HeroBadge from '@/components/HeroBadge';
 import { siteFixedOverlay, siteSectionOverlay } from '../siteBackground';
 
 const contactOverlay = siteSectionOverlay;
@@ -85,6 +86,7 @@ export default function ContactPage() {
           </div>
 
           <div>
+            <HeroBadge className="mb-5" />
             <p className="flex items-center gap-2 text-sm font-semibold uppercase tracking-[0.24em] text-cyan-200">
               <span className="text-cyan-300">✚</span>
               Contact our care team

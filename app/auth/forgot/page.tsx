@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import HeroBadge from '@/components/HeroBadge';
 import { siteSectionOverlay } from '../../siteBackground';
 
 export default function ForgotPasswordPage() {
@@ -8,6 +9,7 @@ export default function ForgotPasswordPage() {
       <div className="relative mx-auto max-w-3xl px-6 py-24 lg:px-8">
         <div className="overflow-hidden rounded-[2.25rem] bg-white shadow-card">
           <div className="bg-cyan-500 px-8 py-10 text-white">
+            <HeroBadge className="mb-6 border-white/30 bg-white/15 text-white" />
             <p className="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-100">Reset Password</p>
             <h1 className="mt-5 text-4xl font-semibold tracking-tight">Forgot your password?</h1>
             <p className="mt-4 max-w-2xl text-base leading-7 text-cyan-100/90">

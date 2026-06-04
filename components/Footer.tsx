@@ -4,7 +4,7 @@ import { siteSectionOverlay } from '@/app/siteBackground';
 const footerLinks = [
   { label: 'Home', href: '/' },
   { label: 'About', href: '/about' },
-  { label: 'Doctor', href: '/doctors' },
+  { label: 'My Services', href: '/services' },
   { label: 'Contact', href: '/contact' },
 ];
 

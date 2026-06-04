@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import HeroBadge from '@/components/HeroBadge';
 import { siteFixedOverlay, siteSectionOverlay } from '../siteBackground';
 
 const inputClass =
@@ -43,6 +44,7 @@ export default function BookPage() {
 
         <div className="relative mx-auto grid w-full max-w-[95rem] gap-10 px-4 sm:px-6 lg:grid-cols-[0.9fr_1.1fr] lg:px-8">
           <div className="flex flex-col justify-center">
+            <HeroBadge className="mb-5" />
             <span className="w-fit rounded-full border border-cyan-300/20 bg-cyan-400/10 px-4 py-2 text-xs font-semibold uppercase tracking-[0.28em] text-cyan-200">
               Secure GP booking
             </span>

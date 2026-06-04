@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import HeroBadge from '@/components/HeroBadge';
 import { siteFixedOverlay, siteSectionOverlay } from '../siteBackground';
 
 const aboutOverlay = siteSectionOverlay;
@@ -38,6 +39,7 @@ export default function AboutPage() {
         <div className="relative mx-auto max-w-[95rem] px-4 sm:px-6 lg:px-8">
           <div className="grid gap-12 lg:grid-cols-[0.95fr_1.05fr] lg:items-center">
             <div className="space-y-8">
+              <HeroBadge />
               <span className="inline-flex items-center gap-2 rounded-full border border-cyan-400/20 bg-cyan-500/10 px-4 py-2 text-xs uppercase tracking-[0.35em] text-cyan-200 shadow-[0_0_0_rgba(56,189,248,0.08)]">
                 About GP Primary Care
               </span>
@@ -125,6 +127,103 @@ export default function AboutPage() {
                 <p className="mt-3 max-w-xl text-base font-semibold leading-7 text-white">
                   Personal care planning, video guidance, and follow-up notes arranged around one trusted doctor.
                 </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="relative overflow-hidden border-t border-white/10 py-20 text-white backdrop-blur-sm lg:py-24">
+        <div className={`absolute inset-0 -z-10 ${aboutOverlay}`} />
+        <div className="absolute left-0 top-1/3 -z-10 h-96 w-96 rounded-full bg-cyan-400/16 blur-3xl" />
+        <div className="absolute right-0 bottom-0 -z-10 h-96 w-96 rounded-full bg-primary/18 blur-3xl" />
+
+        <div className="relative mx-auto w-full max-w-[95rem] px-4 lg:px-6">
+          <div className="mb-16 space-y-4 animate-fade-up">
+            <p className="text-sm font-semibold uppercase tracking-[0.3em] text-cyan-200">Why Choose Us</p>
+            <h2 className="text-4xl sm:text-5xl font-bold tracking-tight text-white">
+              Healthcare that <span className="bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">works for you</span>
+            </h2>
+            <p className="max-w-2xl text-lg leading-8 text-slate-300">
+              Experience healthcare designed around your lifestyle with modern technology and personalized care.
+            </p>
+          </div>
+
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              {
+                icon: '01',
+                title: 'Instant Access',
+                text: 'Book appointments in seconds with clear next steps and no confusing process.',
+                color: 'from-cyan-500 to-blue-500',
+              },
+              {
+                icon: '02',
+                title: 'Secure & Private',
+                text: 'Confidential communication and careful handling of your medical information.',
+                color: 'from-green-500 to-emerald-500',
+              },
+              {
+                icon: '03',
+                title: 'Transparent Pricing',
+                text: 'Simple care options with clear guidance before your consultation begins.',
+                color: 'from-purple-500 to-pink-500',
+              },
+              {
+                icon: '04',
+                title: 'Personalized Care',
+                text: 'One dedicated doctor who understands your health history and goals.',
+                color: 'from-orange-500 to-red-500',
+              },
+            ].map((benefit, index) => (
+              <div
+                key={benefit.title}
+                className="group relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/10 p-8 shadow-[0_30px_90px_rgba(15,23,42,0.28)] backdrop-blur-xl transition-all duration-500 hover:-translate-y-3 hover:border-cyan-300/60 hover:bg-white/15 hover:shadow-[0_35px_100px_rgba(3,166,136,0.18)]"
+                style={{ animationDelay: `${index * 100}ms` }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-br from-cyan-500/10 to-blue-500/5 opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
+                <div className="relative z-10 space-y-6">
+                  <div className={`flex h-16 w-16 items-center justify-center rounded-3xl bg-gradient-to-br ${benefit.color} text-sm font-bold text-white transition-transform duration-500 group-hover:scale-110`}>
+                    {benefit.icon}
+                  </div>
+                  <div className="space-y-3">
+                    <h3 className="text-xl font-semibold text-white">{benefit.title}</h3>
+                    <p className="text-sm leading-7 text-slate-300">{benefit.text}</p>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="mt-16 grid gap-8 lg:grid-cols-2 lg:items-center">
+            <div className="space-y-6">
+              <h3 className="text-3xl sm:text-4xl font-bold text-white">
+                Modern healthcare, <span className="text-cyan-400">traditional trust</span>
+              </h3>
+              <p className="text-lg leading-8 text-slate-300">
+                We combine thoughtful technology with the personal touch of traditional healthcare, giving you reliable primary care that feels clear, calm, and connected.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                {['Video Calls', 'Chat Support', 'Digital Records', 'Follow-up Care'].map((feature) => (
+                  <div key={feature} className="rounded-full border border-cyan-400/30 bg-cyan-500/10 px-4 py-2 text-sm font-medium text-cyan-200">
+                    {feature}
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className="relative overflow-hidden rounded-[2rem] border border-white/10 bg-white/5 p-8 shadow-[0_30px_90px_rgba(15,23,42,0.25)] backdrop-blur-xl">
+              <div className="grid gap-6 sm:grid-cols-2">
+                {[
+                  ['98%', 'Patient Satisfaction'],
+                  ['24/7', 'Support Available'],
+                  ['5 min', 'Average Wait Time'],
+                  ['Secure', 'Private Care'],
+                ].map(([value, label]) => (
+                  <div key={label} className="text-center">
+                    <div className="text-4xl font-bold text-cyan-400">{value}</div>
+                    <div className="mt-2 text-sm text-slate-300">{label}</div>
+                  </div>
+                ))}
               </div>
             </div>
           </div>
@@ -434,7 +533,7 @@ export default function AboutPage() {
         <div className="relative mx-auto w-full max-w-[95rem] px-4 sm:px-6 lg:px-8">
           <div className="relative overflow-hidden rounded-[2.5rem] border border-white/10 shadow-[0_40px_120px_rgba(15,23,42,0.2)]">
             <img
-              src="https://plus.unsplash.com/premium_photo-1681843126728-04eab730febe?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+              src="https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&w=1400&q=85"
               alt="Healthcare background"
               className="absolute inset-0 h-full w-full object-cover"
             />

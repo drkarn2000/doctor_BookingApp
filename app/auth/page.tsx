@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import HeroBadge from '@/components/HeroBadge';
 import { siteSectionOverlay } from '../siteBackground';
 
 export default function AuthPage() {
@@ -8,6 +9,7 @@ export default function AuthPage() {
       <div className="relative mx-auto max-w-7xl px-6 py-24 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-[0.95fr,1.05fr] lg:items-center">
           <div className="space-y-6 rounded-[2.5rem] bg-white/5 p-10 shadow-card backdrop-blur-xl">
+            <HeroBadge />
             <div className="inline-flex items-center gap-3 rounded-full bg-cyan-500/10 px-4 py-2 text-sm font-semibold uppercase tracking-[0.24em] text-cyan-200">
               Welcome back
             </div>
